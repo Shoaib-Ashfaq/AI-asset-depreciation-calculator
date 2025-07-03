@@ -1,0 +1,20 @@
+**Project Overview: AI-Powered Asset Depreciation Calculator**
+
+**1. What this project does:**
+This project helps users calculate the depreciation of their assets. It uses Artificial Intelligence to suggest the appropriate useful life, salvage value, and depreciation method for an asset based on its category and other details.
+
+**2. Input:**
+To start, you need to provide the following details about your asset:
+*   **Asset Name:** A descriptive name for the asset (e.g., "MacBook Pro 16-inch").
+*   **Purchase Cost:** The original cost of the asset.
+*   **Purchase Date:** The date the asset was acquired.
+*   **Asset Category:** The category the asset belongs to (e.g., "Electronics", "Furniture", "Vehicle"). This is used by the AI to find similar assets.
+*   **Total Units of Production (optional):** The total number of units the asset is expected to produce over its life. This is required only if you intend to use the "Units of Production" depreciation method.
+
+**3. Output:**
+After you provide the input, the application's AI will analyze the data and provide:
+*   **Suggested Useful Life:** The number of years the asset is expected to be in service.
+*   **Suggested Salvage Value:** The estimated residual value of the asset at the end of its useful life.
+*   **Suggested Depreciation Method:** The recommended method to use for calculating depreciation (e.g., "Straight-Line", "Double-Declining Balance", "Units of Production").
+
+Using this AI-generated information, the application can then generate a detailed, year-by-year depreciation report. This report will show the annual depreciation expense, the accumulated depreciation over time, and the remaining book value of the asset for each year of its useful life.
