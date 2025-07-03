@@ -1,0 +1,32 @@
+.fieldSection {
+  width: 100%;
+
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0.5rem;
+    display: block;
+
+    span {
+      color: red;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 46px;
+    padding: 0 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  }
+}
