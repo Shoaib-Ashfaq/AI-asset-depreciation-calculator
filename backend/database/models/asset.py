@@ -59,18 +59,24 @@ class Asset:
 
         return depreciationDetails.id
 
-    def get_asset_list(category: str, limit: int = 10):
+    def get_asset_list(category: str = None, limit: int = 10):
         # Get db.
         db = Database.get()
 
+        # Base query.
+        query = db.query(Assets.id, Assets.name, Assets.category)
+
         # Get list.
-        assets = (
-            db.query(Assets)
-            .filter(func.lower(Assets.category) == func.lower(category))
-            .order_by(Assets.created.desc())
-            .limit(limit)
-            .all()
-        )
+        if category:
+            query = query.filter(func.lower(Assets.category) == func.lower(category))
+
+        assets = query.order_by(Assets.created.desc()).limit(limit).all()
+
+        # Convert to list of dicts.
+        asset_list = [
+            {"id": asset.id, "name": asset.name, "category": asset.category}
+            for asset in assets
+        ]
 
         # Return.
-        return assets
+        return asset_list

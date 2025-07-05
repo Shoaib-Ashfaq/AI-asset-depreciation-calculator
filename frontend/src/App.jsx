@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Depreciation from "src/pages/Depreciation";
 import Report from "src/pages/Report";
+import AssetsList from "src/pages/AssetsList";
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
       />
       <Routes>
         <Route path="" element={<Depreciation />} />;
-        <Route path="assets/:id" element={<Report />} />;
+        <Route path="/assets" element={<AssetsList />} />;
+        <Route path="/assets/:id" element={<Report />} />;
         <Route exact path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

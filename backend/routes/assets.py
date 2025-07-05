@@ -3,6 +3,7 @@ from backend.utils.schema import AssetDetails, DepreciationDetails
 from backend.interactors import get_asset as get_asset_interactor
 from backend.interactors import upd_asset as upd_asset_interactor
 from backend.interactors import find_depreciation as find_depreciation_interactor
+from backend.interactors import get_assets_list as get_assets_list_interactor
 import uuid
 
 # Create a router.
@@ -23,3 +24,8 @@ async def upd_asset(payload: DepreciationDetails):
 @router.get("/get-asset/")
 async def get_asset(asset_id: uuid.UUID):
     return get_asset_interactor.call(asset_id)
+
+
+@router.get("/get-assets-list/")
+async def get_all_assets():
+    return get_assets_list_interactor.call()

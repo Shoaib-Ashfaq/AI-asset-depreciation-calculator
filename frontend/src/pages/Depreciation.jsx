@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 import "src/pages/Depreciation.css";
 import Button from "src/lib/components/Button";
@@ -64,6 +65,7 @@ const Depreciation = () => {
 
   return (
     <div className="mainDiv">
+      <Link to="/assets" className="listLink">List of previous added asset</Link>
       <h1>Asset Form</h1>
       <form onSubmit={getDepreciationDetails}>
         <div className="parallelFields">
